@@ -15,6 +15,6 @@ var counter 0;
 (app get "/", (=> (req, res)
   res send 'Hello, visitor $(++ counter)';
 ).
-(app listen 3000, (=> ()
+(app listen 6500, (=> ()
   print "sugly server is ready!";
 ).
