@@ -1,0 +1,35 @@
+{
+  "name": "sugly-npm-template-api",
+  "version": "0.0.2",
+  "description": "a Sugly RESTful service template",
+  "author": {
+    "name": "Leevi Li",
+    "email": "leevi@nirlstudio.com"
+  },
+  "license": "MIT",
+  "repository": "",
+  "main": "index.js",
+  "bin": {
+    "sugly-npm-template-api": "bin/sugly-npm-template-api"
+  },
+  "scripts": {
+    "mocha": "mocha",
+    "test": "sugly :profile test sugly/test"
+  },
+  "keywords": [
+    "sugly"
+  ],
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "sugly": "github:NirlStudio/sugly-lang#development"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4",
+    "standard": "^12.0.1"
+  }
+}
