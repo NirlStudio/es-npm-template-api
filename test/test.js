@@ -10,8 +10,22 @@ require('../profile')($void)
 var appHome = path.resolve(__dirname, '../sugly/@')
 var space = $void.createBootstrapSpace(appHome)
 
+describe('package', function () {
+  it('package can be imported as a function.', function () {
+    var pkg = require('..')
+    assert.strict.equal(typeof pkg, 'function')
+  })
+})
+
 describe('sugly/profile', function () {
   var profile = space.$load('./profile')
+
+  describe('server-port', function () {
+    it('server-port is 6500.', function () {
+      assert.strict.equal(profile['server-port'], 6500)
+    })
+  })
+
   describe('initial-todos', function () {
     var initialToDos = profile['initial-todos']
     it('initial-todos is a global array.', function () {

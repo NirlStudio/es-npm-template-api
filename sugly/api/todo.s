@@ -3,6 +3,9 @@ const express (import "$express");
 export api (express call);
 const route ($api generic);
 
+(if (initial-todos is-not-an array)
+  const * (load "../profile");
+).
 const todos (initial-todos copy);
 
 (route get "/todos", (=> (req, res)

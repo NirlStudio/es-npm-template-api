@@ -14,7 +14,9 @@
   },
   "scripts": {
     "mocha": "mocha",
-    "test": "sugly :profile test sugly/test"
+    "test": "sugly :profile test sugly/test",
+    "install": "scripts/install",
+    "uninstall": "scripts/uninstall"
   },
   "keywords": [
     "sugly"

@@ -1,4 +1,6 @@
-# Obviously, this is only for demostration purpose.
-(@ initial-todos: (@
-  "diary: milk, bread, eggs, ...",
+(@
+  server-port: 6500,
+  initial-todos: (@
+    "diary: milk, bread, eggs, ...",
+  ).
 ).
