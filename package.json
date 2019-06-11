@@ -10,7 +10,7 @@
   "repository": "",
   "main": "index.js",
   "bin": {
-    "sugly-npm-template-api": "bin/sugly-npm-template-api"
+    "sugly-npm-template-api": "bin/hello"
   },
   "scripts": {
     "mocha": "mocha",
