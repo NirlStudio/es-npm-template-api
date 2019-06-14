@@ -7,7 +7,7 @@
     "email": "leevi@nirlstudio.com"
   },
   "license": "MIT",
-  "repository": "",
+  "repository": "NirlStudio/sugly-npm-template-api",
   "main": "index.js",
   "bin": {
     "sugly-npm-template-api": "bin/hello"
