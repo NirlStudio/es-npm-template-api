@@ -18,7 +18,7 @@ const todo (import "./api/todo");
   ).
 
   (app listen server-port, (=> ()
-    print 'sugly server is running on $server-port ...';
+    print 'API server is running on $server-port ...';
   ).
 
   #(return)# server-port
