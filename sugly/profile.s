@@ -1,5 +1,5 @@
 (@
-  server-port: 6500,
+  server-port: 6502,
   initial-todos: (@
     "diary: milk, bread, eggs, ...",
   ).
