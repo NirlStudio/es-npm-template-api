@@ -21,8 +21,8 @@ describe('sugly/profile', function () {
   var profile = space.$load('./profile')
 
   describe('server-port', function () {
-    it('server-port is 6500.', function () {
-      assert.strict.equal(profile['server-port'], 6500)
+    it('server-port is 6502.', function () {
+      assert.strict.equal(profile['server-port'], 6502)
     })
   })
 
