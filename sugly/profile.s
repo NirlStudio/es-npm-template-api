@@ -4,7 +4,7 @@
     (@
       id: 0,
       text: "diary: milk, bread, eggs, ...",
-      kind: null,
+      color: null,
       created: (date now),
       completed: null
     ).

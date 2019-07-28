@@ -47,7 +47,10 @@ const todos (json parse (read saved-todos):: ?? initial-todos);
     return (res status 400);
   ).
   var id (number of-int (req params:: id);
-  var updated (object assign (todos: id), data, (@:@ id);
+  (var updated (object assign (todos: id), data, (@:@ id,
+    # convert completed status to the completion time on server side.
+    completed: (data completed:: ? (date now), false).
+  ).
   (if updated
     save-todos;
     res status 200:: json updated;
