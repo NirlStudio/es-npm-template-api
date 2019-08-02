@@ -1,16 +1,16 @@
 'use strict'
 
 var path = require('path')
-var sugly = require('sugly')
+var espresso = require('eslang')
 
 // create the void.
-var $void = sugly()
+var $void = espresso()
 require('./profile')($void)
 
 function main (args) {
   return $void.$run('app',
     Array.isArray(args) ? args : [],
-    path.join(__dirname, 'sugly')
+    path.join(__dirname, 'espresso')
   )
 }
 

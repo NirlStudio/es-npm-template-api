@@ -1,4 +1,4 @@
-#!/usr/bin/env sugly
+#!/usr/bin/env es
 
 # setup environment, for example: the server port number.
 export * (load "./profile");

@@ -1,13 +1,13 @@
 var path = require('path')
 var assert = require('assert')
 
-var sugly = require('sugly')
+var espresso = require('eslang')
 
 // create the void.
-var $void = sugly()
+var $void = espresso()
 require('../profile')($void)
 
-var appHome = path.resolve(__dirname, '../sugly/@')
+var appHome = path.resolve(__dirname, '../es/@')
 var space = $void.createBootstrapSpace(appHome)
 
 describe('package', function () {
@@ -17,7 +17,7 @@ describe('package', function () {
   })
 })
 
-describe('sugly/profile', function () {
+describe('es/profile', function () {
   var profile = space.$load('./profile')
 
   describe('server-port', function () {
@@ -36,7 +36,7 @@ describe('sugly/profile', function () {
   })
 })
 
-describe('sugly/api', function () {
+describe('es/api', function () {
   describe('todo', function () {
     it('todo.api is an express middleware', function () {
       var todo = space.$import('api/todo')
