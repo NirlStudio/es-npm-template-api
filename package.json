@@ -10,7 +10,7 @@
   "repository": "NirlStudio/es-npm-template-api",
   "main": "index.js",
   "bin": {
-    "es-npm-template-api": "bin/hello"
+    "hello-api": "bin/hello"
   },
   "scripts": {
     "mocha": "mocha",
