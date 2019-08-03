@@ -10,7 +10,7 @@ require('./profile')($void)
 function main (args) {
   return $void.$run('app',
     Array.isArray(args) ? args : [],
-    path.join(__dirname, 'espresso')
+    path.join(__dirname, 'es')
   )
 }
 
