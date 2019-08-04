@@ -4,11 +4,11 @@ const express (import "$express");
 export api (express call);
 const route ($api generic);
 
-const saved-todos "~/.saved-todos.json";
-const todos (json parse (read saved-todos):: ?? initial-todos);
+const saved-todos "~/.saved-todos.es";
+const todos (eval (read saved-todos):: ?? initial-todos);
 
 (const save-todos (=> ()
-  (to-write saved-todos, (json of todos):: finally (=> waiting
+  (to-write saved-todos, (todos to-code:: to-string):: finally (=> waiting
     (if (waiting excuse:: is null)
       log i "todos are saved.";
     else
@@ -17,7 +17,8 @@ const todos (json parse (read saved-todos):: ?? initial-todos);
 ).
 
 (route get "/todos", (=> (req, res)
-  res status 200:: json todos;
+  res header "Content-Type", "application/x-espresso;charset=utf-8";
+  res status 200:: end (todos to-code:: to-string);
 ).
 
 (route get "/todo/:id", (=> (req, res)
