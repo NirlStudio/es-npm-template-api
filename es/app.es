@@ -3,18 +3,12 @@
 # setup environment, for example: the server port number.
 export * (load "./profile");
 
-const express (import "$express");
+const express (import "es-express/express");
 const body-parser (import "$body-parser");
 const todo (import "./api/todo");
 
 (export main (=> ()
-  const app (express call:: generic);
-  (app use (=> (req, res, next)
-    res header "Access-Control-Allow-Origin", "*";
-    res header "Access-Control-Allow-Methods", "GET, POST, PUT, DELETE";
-    res header "Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept";
-    next;
-  ).
+  const app (express public-api);
 
   app use (body-parser json);
   app use "/api/v1", (todo "api");

@@ -17,15 +17,14 @@ const todos (eval (read saved-todos):: ?? initial-todos);
 ).
 
 (route get "/todos", (=> (req, res)
-  res header "Content-Type", "application/x-espresso;charset=utf-8";
-  res status 200:: end (todos to-code:: to-string);
+  res status 200:: body todos;
 ).
 
 (route get "/todo/:id", (=> (req, res)
   var id (req params:: id);
   var todo (todos (number of-int id);
   (if todo
-    res status 200:: json todo;
+    res status 200:: body todo;
   else
     res status 404;
   ).
@@ -39,7 +38,7 @@ const todos (eval (read saved-todos):: ?? initial-todos);
   data "id" (todos length);
   data "created" (date now);
   todos push data; save-todos;
-  res status 200:: json data;
+  res status 200:: body data;
 ).
 
 (route put "/todo/:id", (=> (req, res)
@@ -54,7 +53,7 @@ const todos (eval (read saved-todos):: ?? initial-todos);
   ).
   (if updated
     save-todos;
-    res status 200:: json updated;
+    res status 200:: body updated;
   else
     res status 404;
   )
@@ -63,5 +62,5 @@ const todos (eval (read saved-todos):: ?? initial-todos);
 (route delete "/todo/:id", (=> (req, res)
   var id (number of-int (req params:: id);
   todos reset id; save-todos;
-  res status 200:: json (@:@ id);
+  res status 200:: body (@:@ id);
 ).
