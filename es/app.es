@@ -4,13 +4,10 @@
 export * (load "./profile");
 
 const express (import "es-express/express");
-const body-parser (import "$body-parser");
 const todo (import "./api/todo");
 
 (export main (=> ()
   const app (express public-api);
-
-  app use (body-parser json);
   app use "/api/v1", (todo "api");
 
   var counter 0;
