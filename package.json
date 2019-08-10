@@ -1,6 +1,6 @@
 {
   "name": "es-npm-template-api",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "an Espresso RESTful service template",
   "author": {
     "name": "Leevi Li",
@@ -14,9 +14,7 @@
   },
   "scripts": {
     "mocha": "mocha",
-    "test": "es :profile test es/test",
-    "install": "scripts/install",
-    "uninstall": "scripts/uninstall"
+    "test": "es :profile test es/test"
   },
   "keywords": [
     "es",
@@ -34,8 +32,8 @@
     ]
   },
   "dependencies": {
-    "es-express": "^1.0.4",
-    "eslang": "^1.0.6"
+    "es-express": "^1.0.5",
+    "eslang": "github:NirlStudio/eslang#development"
   },
   "devDependencies": {
     "mocha": "^6.2.0",

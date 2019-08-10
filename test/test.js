@@ -39,7 +39,7 @@ describe('es/profile', function () {
 describe('es/api', function () {
   describe('todo', function () {
     it('todo.api is an express middleware', function () {
-      var todo = space.$import('api/todo')
+      var todo = space.$import('./api/todo')
       assert.strict.equal(typeof todo.api, 'function')
       var api = todo.api
       assert.strict.equal(typeof api.get, 'function')
