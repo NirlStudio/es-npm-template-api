@@ -1,4 +1,3 @@
-
 (define "profile" (=()
   var * (load "./profile");
 
@@ -11,18 +10,18 @@
 
 (define "api" (=()
   (define "todo" (=()
-    const todo (import "./api/todo");
+    const (app) (import "./api/todo");
 
-    (should "(todo \"api\") is an express middleware." (=>()
-      assert (todo "api":: is-a function);
-      assert (todo "api":: is-generic);
+    (should "(todo \"app\") is a generic express middleware." (=>()
+      assert (app "call":: is-a function);
+      assert (app "call":: is-generic);
 
-      var api (todo "api":: generic);
-      assert (api "all":: is-a function);
-      assert (api "get":: is-a function);
-      assert (api "post":: is-a function);
-      assert (api "put":: is-a function);
-      assert (api "delete":: is-a function);
+      assert (app "all":: is-a function);
+      assert (app "get":: is-a function);
+      assert (app "post":: is-a function);
+      assert (app "put":: is-a function);
+      assert (app "patch":: is-a function);
+      assert (app "delete":: is-a function);
     ).
   ).
 ).

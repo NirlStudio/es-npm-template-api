@@ -5,7 +5,6 @@ var espresso = require('eslang')
 
 // create the void.
 var $void = espresso()
-require('./profile')($void)
 
 function main (args) {
   return $void.$run('app',
