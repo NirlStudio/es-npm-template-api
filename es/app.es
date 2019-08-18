@@ -3,7 +3,7 @@
 # setup environment, for example: the server port number.
 export * (load "./profile");
 
-const express (import "es-express");
+const express (import "express");
 const todo (import "./api/todo");
 
 (export main (=> ()

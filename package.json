@@ -1,6 +1,6 @@
 {
   "name": "es-npm-template-api",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "an Espresso RESTful service template",
   "author": {
     "name": "Leevi Li",
@@ -32,8 +32,8 @@
     ]
   },
   "dependencies": {
-    "es-express": "^1.0.6",
-    "eslang": "^1.0.8"
+    "@eslang/express": "^1.1.0",
+    "eslang": "^1.0.10"
   },
   "devDependencies": {
     "mocha": "^6.2.0",
