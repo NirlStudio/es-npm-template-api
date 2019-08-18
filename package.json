@@ -1,5 +1,5 @@
 {
-  "name": "es-npm-template-api",
+  "name": "@eslang/npm-template-api",
   "version": "1.2.6",
   "description": "an Espresso RESTful service template",
   "author": {
@@ -32,7 +32,7 @@
     ]
   },
   "dependencies": {
-    "@eslang/express": "^1.1.0",
+    "@eslang/express": "^1.1.1",
     "eslang": "^1.0.10"
   },
   "devDependencies": {
